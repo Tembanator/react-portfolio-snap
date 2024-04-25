@@ -7,7 +7,7 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
     const handleMenuToggle = () => setShowMenu(!showMenu)
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
+        <div className='fixed z-10 w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
             <div>
                 <img src={logo} alt="logo" className='w-14' />
             </div>
