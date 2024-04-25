@@ -4,7 +4,7 @@ import Wrapper from './Wrapper'
 
 const About = () => {
     return (
-        <div name='hero' className='w-full h-screen bg-[#0a192f] text-gray-400 flex flex-col justify-center'>
+        <div name='about' className='w-full h-screen bg-[#0a192f] text-gray-400 flex flex-col justify-center'>
             <Wrapper>
                 <div className='grid sm:grid-cols-2 gap-6 sm:justify-items-end'>
                     <Heading>About</Heading>

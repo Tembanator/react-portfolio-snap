@@ -27,7 +27,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <div name='hero' className='w-full sm:h-screen bg-[#0a192f] flex flex-col justify-center text-white'>
+        <div name='skills' className='w-full sm:h-screen bg-[#0a192f] flex flex-col justify-center text-white'>
             <Wrapper>
                 <Heading>Skills</Heading>
                 <p>// These are the technologies I have worked with</p>

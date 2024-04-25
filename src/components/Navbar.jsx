@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo1.png'
+import logo from '../assets/logo3.png'
 import { FaBars, FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-scroll';
+
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
     const handleMenuToggle = () => setShowMenu(!showMenu)
@@ -13,11 +15,43 @@ const Navbar = () => {
             {/*Menu*/}
 
             <ul className='hidden md:flex' >
-                <li>Home</li>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Work</li>
-                <li>Contact</li>
+                <li>
+                    <Link
+                        to="hero"
+                        smooth={true}
+                        duration={500}
+                    >
+                        Home
+                    </Link>
+                </li>
+                <li><Link
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                >
+                    About
+                </Link></li>
+                <li><Link
+                    to="skills"
+                    smooth={true}
+                    duration={500}
+                >
+                    Skills
+                </Link></li>
+                <li><Link
+                    to="work"
+                    smooth={true}
+                    duration={500}
+                >
+                    Work
+                </Link></li>
+                <li><Link
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                >
+                    Contact
+                </Link></li>
             </ul>
 
 
@@ -30,11 +64,53 @@ const Navbar = () => {
 
             {/*Mobile menu*/}
             <ul className={!showMenu ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col items-center justify-center'}>
-                <li className='py-6 text-4xl'>Home</li>
-                <li className='py-6 text-4xl'>About</li>
-                <li className='py-6 text-4xl'>Skills</li>
-                <li className='py-6 text-4xl'>Work</li>
-                <li className='py-6 text-4xl'>Contact</li>
+                <li className='py-6 text-4xl'>
+                    <Link
+                        onClick={handleMenuToggle}
+                        to="hero"
+                        smooth={true}
+                        duration={500}
+                    >
+                        Home
+                    </Link>
+                </li>
+                <li className='py-6 text-4xl'>
+                    <Link
+                        onClick={handleMenuToggle}
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                    >
+                        About
+                    </Link></li>
+                <li className='py-6 text-4xl'>
+                    <Link
+                        onClick={handleMenuToggle}
+                        to="skills"
+                        smooth={true}
+                        duration={500}
+                    >
+                        Skills
+                    </Link></li>
+                <li className='py-6 text-4xl'>
+                    <Link
+                        onClick={handleMenuToggle}
+                        to="work"
+                        smooth={true}
+                        duration={500}
+                    >
+                        Work
+                    </Link></li>
+                <li className='py-6 text-4xl'>
+                    <Link
+                        onClick={handleMenuToggle}
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                    >
+                        Contact
+                    </Link>
+                </li>
             </ul>
 
             {/*Social icons*/}
